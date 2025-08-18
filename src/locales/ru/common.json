@@ -1,0 +1,7 @@
+{
+  "welcome": "Добро пожаловать, {{name}}!",
+  "items_one": "{{count}} предмет",
+  "items_few": "{{count}} предмета",
+  "items_many": "{{count}} предметов",
+  "items_other": "{{count}} предмета"
+}

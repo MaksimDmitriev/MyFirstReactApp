@@ -5,10 +5,10 @@
  * @format
  */
 
+import './src/i18n'; 
+import { useTranslation } from 'react-i18next';
+
 import {
-  Image,
-  Pressable,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -33,109 +33,15 @@ function App() {
 
 function AppContent() {
   const insets = useSafeAreaInsets();
+  const translation = useTranslation();
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
-      {/* Header */}
-      <View style={styles.header}>
-        <View style={styles.headerLeft}>
-          <View style={styles.iconCircle} />
-          <Text style={styles.headerTitle}>Title</Text>
-        </View>
-        <View style={styles.headerRight}>
-          <View style={[styles.iconCircle, { width: 28, height: 28 }]} />
-        </View>
-      </View>
-
-      {/* Content */}
-      <ScrollView
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Hero / Picture */}
-        <View style={styles.heroWrap}>
-          {/* Replace with your asset or remote image */}
-          <Image
-            style={styles.hero}
-            source={{ uri: 'https://picsum.photos/800/400' }}
-          />
-        </View>
-
-        {/* Title + Subtitle */}
-        <View style={styles.titleBlock}>
-          <Text style={styles.title}>Screen Title</Text>
-          <Text style={styles.subtitle}>Subtitle or short description</Text>
-        </View>
-
-        {/* Chips / Quick filters (optional) */}
-        <View style={styles.chipsRow}>
-          {['Hello', 'World', 'Fast', 'Refresh'].map(c => (
-            <Pressable key={c} style={styles.chip}>
-              <Text style={styles.chipText}>{c}</Text>
-            </Pressable>
-          ))}
-        </View>
-
-        {/* Section Header */}
-        <Text style={styles.sectionHeader}>Menu</Text>
-
-        {/* Menu List */}
-        <View style={styles.card}>
-          {MENU_ITEMS.map((item, idx) => (
-            <View
-              key={item.id}
-              style={[
-                styles.row,
-                idx < MENU_ITEMS.length - 1 && styles.rowDivider,
-              ]}
-            >
-              <View style={styles.rowLeft}>
-                <View style={styles.rowIcon} />
-                <View style={styles.rowTextBlock}>
-                  <Text style={styles.rowTitle}>{item.title}</Text>
-                  {item.subtitle ? (
-                    <Text style={styles.rowSubtitle}>{item.subtitle}</Text>
-                  ) : null}
-                </View>
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </View>
-          ))}
-        </View>
-
-        {/* Another section (optional) */}
-        <Text style={styles.sectionHeader}>More</Text>
-        <View style={styles.card}>
-          {MORE_ITEMS.map((item, idx) => (
-            <View
-              key={item.id}
-              style={[
-                styles.row,
-                idx < MORE_ITEMS.length - 1 && styles.rowDivider,
-              ]}
-            >
-              <View style={styles.rowLeft}>
-                <View
-                  style={[styles.rowIcon, { backgroundColor: '#6B7280' }]}
-                />
-                <Text style={styles.rowTitle}>{item.title}</Text>
-              </View>
-              <Text style={styles.chevron}>›</Text>
-            </View>
-          ))}
-        </View>
-
-        <View style={{ height: 96 }} />
-      </ScrollView>
-
-      {/* Sticky Bottom Actions (optional) */}
-      <View style={styles.bottomBar}>
-        <Pressable style={[styles.bottomBtn, styles.btnSecondary]}>
-          <Text style={styles.btnSecondaryText}>Secondary</Text>
-        </Pressable>
-        <Pressable style={[styles.bottomBtn, styles.btnPrimary]}>
-          <Text style={styles.btnPrimaryText}>Primary</Text>
-        </Pressable>
-      </View>
+      <Text style={styles.titleBlock}>
+        {translation.t('welcome', { name: 'Maksim' })}
+      </Text>
+      <Text style={styles.titleBlock}>
+        {translation.t('items', { count: 5 })}
+      </Text>
     </View>
   );
 }
@@ -253,16 +159,5 @@ const styles = StyleSheet.create({
   btnPrimary: { backgroundColor: '#3B82F6' },
   btnPrimaryText: { color: 'white', fontWeight: '700' },
 });
-
-const MENU_ITEMS = [
-  { id: '1', title: 'Hello World', subtitle: 'Learn the basics' },
-  { id: '2', title: 'Fast Refresh', subtitle: 'Instant UI updates' },
-  { id: '3', title: 'DevTools', subtitle: 'Debugging & profiling' },
-];
-
-const MORE_ITEMS = [
-  { id: 'a', title: 'Settings' },
-  { id: 'b', title: 'About' },
-];
 
 export default App;
