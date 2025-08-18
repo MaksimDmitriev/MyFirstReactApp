@@ -86,3 +86,6 @@ temp/
 *.tmp
 *.swp
 
+# iOS Xcode workspace
+ios/*.xcworkspace
+
