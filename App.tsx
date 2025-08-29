@@ -5,8 +5,9 @@
  * @format
  */
 
-import './src/i18n'; 
+import './src/i18n';
 import { useTranslation } from 'react-i18next';
+import { pluralKey } from './src/i18nPlural';
 
 import {
   StatusBar,
@@ -33,14 +34,62 @@ function App() {
 
 function AppContent() {
   const insets = useSafeAreaInsets();
-  const translation = useTranslation();
+  const { t, i18n } = useTranslation();
+
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
+      <Text style={styles.titleBlock}>{t('welcome', { name: 'Maksim' })}</Text>
+
       <Text style={styles.titleBlock}>
-        {translation.t('welcome', { name: 'Maksim' })}
+        {t(pluralKey('items', 0, i18n.language), { count: 0 })}
       </Text>
+
       <Text style={styles.titleBlock}>
-        {translation.t('items', { count: 5 })}
+        {t(pluralKey('items', 1, i18n.language), { count: 1 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 2, i18n.language), { count: 2 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 3, i18n.language), { count: 3 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 4, i18n.language), { count: 4 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 5, i18n.language), { count: 5 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 6, i18n.language), { count: 6 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 7, i18n.language), { count: 7 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 8, i18n.language), { count: 8 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 9, i18n.language), { count: 9 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 10, i18n.language), { count: 10 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 11, i18n.language), { count: 11 })}
+      </Text>
+
+      <Text style={styles.titleBlock}>
+        {t(pluralKey('items', 21, i18n.language), { count: 21 })}
       </Text>
     </View>
   );

@@ -14,12 +14,13 @@ const deviceLang = RNLocalize.getLocales()?.[0]?.languageCode || 'en';
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: deviceLang, // or hardcode 'en' while testing
+  lng: deviceLang,
   fallbackLng: 'en',
   ns: ['common'],
   defaultNS: 'common', // <-- important so useTranslation() finds your keys
   interpolation: { escapeValue: false },
   returnNull: false,
+  debug: true
 });
 
 export default i18n;
