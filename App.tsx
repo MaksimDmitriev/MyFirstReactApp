@@ -35,7 +35,9 @@ function App() {
 function AppContent() {
   const insets = useSafeAreaInsets();
   const { t, i18n } = useTranslation();
-
+  const bundle = i18n.getResourceBundle('ru', 'common');
+  console.log(Object.keys(bundle)); // ensure items_many exists
+  console.log('t(5):', i18n.t('items', { count: 5 }));
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <Text style={styles.titleBlock}>{t('welcome', { name: 'Maksim' })}</Text>
