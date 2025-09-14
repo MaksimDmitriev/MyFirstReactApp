@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		1D49918D2E766303004C7CAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D49918B2E766303004C7CAA /* InfoPlist.strings */; };
 		1D4991912E76A93B004C7CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4991902E76A93B004C7CAA /* LaunchScreen.storyboard */; };
+		1DB20D942E76C68300B86052 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DB20D922E76C68300B86052 /* InfoPlist.strings */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		83F32A0CB81CBDA390EA2EB2 /* libPods-MyFirstReactApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323375F11CD52CDD92CBAEAC /* libPods-MyFirstReactApp.a */; };
 		AED95AA8EACFD024FE3265EE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
@@ -18,12 +18,11 @@
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* MyFirstReactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstReactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyFirstReactApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyFirstReactApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = MyFirstReactApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		1D49918C2E766303004C7CAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D49918E2E766432004C7CAA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D49918F2E76A93B004C7CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D4991922E76A93B004C7CAA /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/LaunchScreen.xcstrings; sourceTree = "<group>"; };
+		1DB20D932E76C68300B86052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MyFirstReactApp/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DB20D952E76C68900B86052 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = MyFirstReactApp/ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1E1944EBA7277A8C9A597E54 /* Pods-MyFirstReactApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFirstReactApp.debug.xcconfig"; path = "Target Support Files/Pods-MyFirstReactApp/Pods-MyFirstReactApp.debug.xcconfig"; sourceTree = "<group>"; };
 		323375F11CD52CDD92CBAEAC /* libPods-MyFirstReactApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyFirstReactApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MyFirstReactApp/AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +47,9 @@
 			children = (
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
 				1D4991902E76A93B004C7CAA /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
-				1D49918B2E766303004C7CAA /* InfoPlist.strings */,
+				1DB20D922E76C68300B86052 /* InfoPlist.strings */,
 			);
 			name = MyFirstReactApp;
 			sourceTree = "<group>";
@@ -165,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4991912E76A93B004C7CAA /* LaunchScreen.storyboard in Resources */,
-				1D49918D2E766303004C7CAA /* InfoPlist.strings in Resources */,
+				1DB20D942E76C68300B86052 /* InfoPlist.strings in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				AED95AA8EACFD024FE3265EE /* PrivacyInfo.xcprivacy in Resources */,
 			);
@@ -268,15 +266,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1D49918B2E766303004C7CAA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D49918C2E766303004C7CAA /* en */,
-				1D49918E2E766432004C7CAA /* ru */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		1D4991902E76A93B004C7CAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +274,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = MyFirstReactApp;
+			sourceTree = "<group>";
+		};
+		1DB20D922E76C68300B86052 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DB20D932E76C68300B86052 /* en */,
+				1DB20D952E76C68900B86052 /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
