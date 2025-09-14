@@ -1,5 +1,19 @@
 {
-  "welcome": "Welcome, {{name}}!",
-  "items_one": "{{count}} item",
-  "items_other": "{{count}} items"
+  "alert_dialog_title": "Grant location permissions",
+  "alert_dialog_message": "Please grant location permissions so that the app can show you your latest location",
+  "alert_dialog_confirm_button": "Grant",
+  "alert_dialog_dismiss_button": "Deny",
+  "fetch_location": "Fetch location",
+  "grant_permissions": "Grant",
+  "app_summary": "This app fetches the user's latest location. Before requesting a location update, please ensure the following conditions are met:",
+  "failed_to_fetch_location": "Failed to fetch the user's location",
+  "permissions_not_granted": "Location permissions not granted",
+  "permissions_granted": "Location permissions granted",
+  "grant_permissions_issue_button": "Grant",
+  "not_connected_to_internet": "Not connected to the Internet",
+  "connected_to_internet": "Connected to the Internet",
+  "internet_connection_issue_how_to_fix": "How to fix",
+  "location_providers_disabled": "Device location disabled",
+  "location_providers_enabled": "Device location enabled",
+  "enable_location_providers": "Enable"
 }

@@ -1,7 +1,19 @@
 {
-  "welcome": "Добро пожаловать, {{name}}!",
-  "items_one": "{{count}} предмет",
-  "items_few": "{{count}} предмета",
-  "items_many": "{{count}} предметов",
-  "items_other": "{{count}} предмета"
+    "alert_dialog_title": "Предоставьте разрешения на определение местоположения",
+    "alert_dialog_message": "Пожалуйста, предоставьте разрешения на определение местоположения, чтобы приложение могло показать ваше последнее местоположение",
+    "alert_dialog_confirm_button": "Предоставить",
+    "alert_dialog_dismiss_button": "Отклонить",
+    "fetch_location": "Получить местоположение",
+    "grant_permissions": "Предоставить",
+    "app_summary": "Это приложение получает последнее местоположение пользователя. Перед запросом обновления местоположения убедитесь, что выполнены следующие условия:",
+    "failed_to_fetch_location": "Не удалось получить местоположение пользователя",
+    "permissions_not_granted": "Разрешения на определение местоположения не предоставлены",
+    "permissions_granted": "Разрешения на определение местоположения предоставлены",
+    "grant_permissions_issue_button": "Предоставить",
+    "not_connected_to_internet": "Нет подключения к Интернету",
+    "connected_to_internet": "Подключено к Интернету",
+    "internet_connection_issue_how_to_fix": "Как исправить",
+    "location_providers_disabled": "Местоположение на устройстве отключено",
+    "location_providers_enabled": "Местоположение на устройстве включено",
+    "enable_location_providers": "Включить"
 }
