@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import './src/i18n';
 import { useTranslation } from 'react-i18next';
 
@@ -13,14 +6,14 @@ import {
   StyleSheet,
   Text,
   useColorScheme,
-  View,
-  Button,
+  View
 } from 'react-native';
 
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import { PillButton } from './PillButton'; // import from step 1
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -36,6 +29,7 @@ function App() {
 function AppContent() {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <Text style={styles.titleBlock}>{t('app_summary')}</Text>
@@ -43,8 +37,8 @@ function AppContent() {
       {/* Row 1 */}
       <View style={styles.row}>
         <Text style={styles.label}>{t('permissions_granted')}</Text>
-        <Button
-          title={t('grant_permissions')}
+        <PillButton
+          label={t('grant_permissions')}
           onPress={() => console.log('Grant pressed')}
         />
       </View>
@@ -52,61 +46,48 @@ function AppContent() {
       {/* Row 2 */}
       <View style={styles.row}>
         <Text style={styles.label}>{t('location_providers_enabled')}</Text>
-        <Button
-          title={t('enable_location_providers')}
+        <PillButton
+          label={t('enable_location_providers')}
           onPress={() => console.log('Enable pressed')}
+          disabled={false} // you can bind this to state
         />
       </View>
 
       {/* Row 3 */}
       <View style={styles.row}>
         <Text style={styles.label}>{t('not_connected_to_internet')}</Text>
-        <Button
-          title={t('internet_connection_issue_how_to_fix')}
+        <PillButton
+          label={t('internet_connection_issue_how_to_fix')}
           onPress={() => console.log('Fix pressed')}
         />
       </View>
 
       {/* Fetch location button */}
       <View style={styles.fetchButton}>
-        <Button
-          title={t('fetch_location')}
+        <PillButton
+          label={t('fetch_location')}
           onPress={() => console.log('Fetching location')}
         />
       </View>
 
       {/* Address */}
-      <Text style={styles.address} />
+      <Text style={styles.address}>
+        {/* Later you can insert localized address or fetched address here */}
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, paddingHorizontal: 16 },
-  titleBlock: {
-    marginTop: 16,
-    marginBottom: 32,
-    fontSize: 16,
-  },
+  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
+  titleBlock: { fontSize: 16, marginBottom: 20, fontWeight: '600' },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 15,
+    marginBottom: 16,
   },
-  label: {
-    flex: 1,
-    fontSize: 16,
-    marginRight: 10,
-  },
-  fetchButton: {
-    marginTop: 20,
-  },
-  address: {
-    marginTop: 20,
-    fontSize: 14,
-    color: '#333',
-  },
+  label: { flex: 1, fontSize: 16, marginRight: 10 },
+  fetchButton: { marginTop: 20, alignItems: 'center' },
+  address: { marginTop: 20, fontSize: 14, color: '#333' },
 });
-
-export default App;
