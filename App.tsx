@@ -83,7 +83,11 @@ function AppContent() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, paddingHorizontal: 16 },
-  titleBlock: { marginTop: 16 },
+  titleBlock: {
+    marginTop: 16,
+    marginBottom: 32,
+    fontSize: 16,
+  },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
