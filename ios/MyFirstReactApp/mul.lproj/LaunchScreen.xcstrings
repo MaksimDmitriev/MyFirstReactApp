@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "GJd-Yh-RWb.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Loading...\"; ObjectID = \"GJd-Yh-RWb\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Loading..."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка…"
+          }
+        }
+      }
+    },
+    "MN2-I3-ftu.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Powered by React Native\"; ObjectID = \"MN2-I3-ftu\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Powered by React Native"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделано при помощи React Native"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
